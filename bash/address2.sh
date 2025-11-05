@@ -38,15 +38,12 @@ edit_entry() {
     return
   fi
 
-  # Show current record
   echo "Current record:"
   grep "^$id:" "$FILE" | column -t -s ":"
 
-  # Read new details
   read -p "Enter new Name: " new_name
   read -p "Enter new Phone: " new_phone
 
-  # Update record using sed
   sed -i "s/^$id:.*/$id:$new_name:$new_phone/" "$FILE"
   echo "✏️ Entry updated successfully!"
 }
