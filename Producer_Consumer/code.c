@@ -80,7 +80,6 @@ int main() {
 
     pthread_join(simpson_thread, NULL);
     pthread_join(joey_thread, NULL);
-
     pthread_mutex_destroy(&mutex);
     sem_destroy(&empty);
     sem_destroy(&full);
