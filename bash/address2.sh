@@ -46,7 +46,7 @@ edit_entry() {
 
   sed -i "s/^$id:.*/$id:$new_name:$new_phone/" "$FILE"
   echo "✏️ Entry updated successfully!"
-}
+} 
 
 display_all() {
   echo "📘 Address Book:"
